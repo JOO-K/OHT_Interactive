@@ -24,6 +24,23 @@ body{
     z-index: 6;
 }
 
+@media all and (max-width: 1000px) {
+    .card{
+        height: 16.66vh;
+    }
+}
+
+#extra{
+    display: none;
+    
+}
+
+@media all and (max-width: 1000px) {
+    #extra{
+        display: block;
+    }
+}
+
 .backgroundimg{
     position: absolute;
     z-index: 5;
