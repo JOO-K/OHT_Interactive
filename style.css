@@ -16,6 +16,7 @@ body{
 }
 
 .logo img{
+    display: none;
     width: 10vw;
     
 }
@@ -30,14 +31,14 @@ body{
 }
 
 .card{
-    background-color: #001B02;
+    background-color: lightgoldenrodyellow;
     width: 5%;
     height: 100%;
     border: 0px solid black;
     box-sizing: border-box;
     text-align: center;
     z-index: 6;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 @media all and (max-width: 1000px) {
