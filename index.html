@@ -25,6 +25,10 @@
                 <div class="backgroundimg">
                     <img src="img/OHT_BG.jpg">
                 </div>
+                
+                <div class="logo">
+                    <img src="img/OHTLOGO_hr_white.png" id="rotate3D">
+                </div>
 
                 <div class="card"></div>
                 <div class="card"></div>
@@ -46,62 +50,53 @@
                 <div class="card"></div>
                 <div class="card"></div>
                 <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
                 
-              
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+
+
             </div>
-            
-            
+
+
         </main>
-        
+
         <!-- tilt.js -->
         <script type="text/javascript" src="js/vanilla-tilt.js"></script>
         <script type="text/javascript">
-            
+
             const element = document.querySelector(".js-tilt");
-            
+
             VanillaTilt.init(document.querySelectorAll(".card"), {
                 reverse: true,
-                max: 90,
+                max: 100,
                 startX: 0,
                 startY: 0,
                 speed: 10000,
@@ -110,6 +105,7 @@
                 easing: "cubic-bezier(0,3,1,1)",
                 reset: false,
                 transition: true,
+                axis: "x",
                 glare: false,
                 "max-glare": 0.25,
                 gyroscope: true,
@@ -120,5 +116,27 @@
             });
 
 
+        </script>
+
+        <script>
+            var x,y,n=0,ny=0,rotINT,rotYINT
+            $(window).scroll(function rotateYDIV() {
+                y=document.getElementById("rotate3D")
+                clearInterval(rotYINT)
+                rotYINT=setInterval("startYRotate()",10)
+            });
+            function startYRotate()
+            {
+                ny=ny+1
+                y.style.transform="rotateY(" + ny + "deg)"
+                y.style.webkitTransform="rotateY(" + ny + "deg)"
+                y.style.OTransform="rotateY(" + ny + "deg)"
+                y.style.MozTransform="rotateY(" + ny + "deg)"
+                if (ny==180 || ny>=360)
+                {
+                    clearInterval(rotYINT)
+                    if (ny>=360){ny=0}
+                }
+            }
         </script>
     </body>

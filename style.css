@@ -3,6 +3,21 @@ body{
     border:0px;
     background-color: #001B02;
     overflow: hidden;
+/*    height: 120vh;*/
+}
+
+.logo{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    display: inline-block;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img{
+    width: 10vw;
+    
 }
 
 .cardcontainer{
@@ -16,12 +31,13 @@ body{
 
 .card{
     background-color: #001B02;
-    width: 10%;
-    height: 33.3vh;
+    width: 5%;
+    height: 100%;
     border: 0px solid black;
     box-sizing: border-box;
     text-align: center;
     z-index: 6;
+    border-radius: 10px;
 }
 
 @media all and (max-width: 1000px) {
