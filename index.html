@@ -25,7 +25,7 @@
                 <div class="backgroundimg">
                     <img src="img/OHT_BG.jpg">
                 </div>
-                
+
                 <div class="logo">
                     <img src="img/OHTLOGO_hr_white.png" id="rotate3D">
                 </div>
@@ -40,49 +40,17 @@
                 <div class="card"></div>
                 <div class="card"></div>
                 <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
+                <div class="card" id="extra"></div>
                 
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-
-
             </div>
 
 
@@ -107,12 +75,7 @@
                 transition: true,
                 axis: "x",
                 glare: false,
-                "max-glare": 0.25,
-                gyroscope: true,
-                gyroscopeMinAngleX: -45,
-                gyroscopeMaxAngleX: 45,
-                gyroscopeMinAngleY: -45,
-                gyroscopeMaxAngleY: 45
+                "max-glare": 0.25
             });
 
 
@@ -140,3 +103,25 @@
             }
         </script>
     </body>
+
+
+    var x,y,n=0,ny=0,rotINT,rotYINT
+    $(window).scroll(function rotateYDIV() {
+    y=document.getElementById("logo")
+    clearInterval(rotYINT)
+    rotYINT=setInterval("startYRotate()",10)
+    });
+
+    function startYRotate()
+    {
+    ny=ny+1
+    y.style.transform="rotateY(" + ny + "deg)"
+    y.style.webkitTransform="rotateY(" + ny + "deg)"
+    y.style.OTransform="rotateY(" + ny + "deg)"
+    y.style.MozTransform="rotateY(" + ny + "deg)"
+    if (ny==180 || ny>=360)
+    {
+    clearInterval(rotYINT)
+    if (ny>=360){ny=0}
+    }
+    }

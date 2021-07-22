@@ -31,7 +31,7 @@ body{
 }
 
 .card{
-    background-color: lightgoldenrodyellow;
+    background-color: grey;
     width: 5%;
     height: 100%;
     border: 0px solid black;
@@ -39,22 +39,23 @@ body{
     text-align: center;
     z-index: 6;
     border-radius: 5px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 500px) {
     .card{
-        height: 16.66vh;
+        width: 10%;
     }
 }
 
 #extra{
-    display: none;
+    display: block;
     
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 500px) {
     #extra{
-        display: block;
+        display: none;
     }
 }
 
