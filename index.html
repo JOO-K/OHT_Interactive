@@ -23,33 +23,78 @@
             <div class="cardcontainer">
 
                 <div class="backgroundimg">
-                    <img src="img/OHT_BG.jpg">
+                    <img src="img/BG_02.jpeg">
                 </div>
 
                 <div class="logo">
                     <img src="img/OHTLOGO_hr_white.png" id="rotate3D">
                 </div>
 
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
-                <div class="card" id="extra"></div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_01.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_02.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_03.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_04.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_05.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_06.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_07.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_08.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_09.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/blind_10.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_11.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_12.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_13.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_14.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_15.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_16.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_17.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_18.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_19.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/blind_20.jpg">  
+                </div>
+                
+             
+                
+                
+                
                 
             </div>
 
@@ -107,24 +152,3 @@
         </script>
     </body>
 
-
-    var x,y,n=0,ny=0,rotINT,rotYINT
-    $(window).scroll(function rotateYDIV() {
-    y=document.getElementById("logo")
-    clearInterval(rotYINT)
-    rotYINT=setInterval("startYRotate()",10)
-    });
-
-    function startYRotate()
-    {
-    ny=ny+1
-    y.style.transform="rotateY(" + ny + "deg)"
-    y.style.webkitTransform="rotateY(" + ny + "deg)"
-    y.style.OTransform="rotateY(" + ny + "deg)"
-    y.style.MozTransform="rotateY(" + ny + "deg)"
-    if (ny==180 || ny>=360)
-    {
-    clearInterval(rotYINT)
-    if (ny>=360){ny=0}
-    }
-    }
