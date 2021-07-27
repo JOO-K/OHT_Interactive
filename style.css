@@ -40,6 +40,8 @@ body{
     z-index: 6;
     border-radius: 5px;
     box-shadow: 0px 0px 50px rgba(15,15,15,0.8);
+    filter: grayscale(2) contrast(2);
+   
 }
 
 .card img{
