@@ -3,7 +3,7 @@ body{
     border:0px;
     background-color: #001B02;
     overflow: hidden;
-/*    height: 120vh;*/
+    height: 120vh;
 }
 
 .logo{
@@ -39,13 +39,14 @@ body{
     text-align: center;
     z-index: 6;
     box-shadow: 0px 0px 50px rgba(15,15,15,0.8);
-    filter: grayscale(2) contrast(2);
+
    
 }
 
 .card img{
     display: none;
     border-radius: 15px;
+    opa
 }
 
 #border{
@@ -106,4 +107,7 @@ body{
     width: 200px;
     height: 100px;
     z-index: 100000;
+    transform-origin: bottom;
+
 }
+
