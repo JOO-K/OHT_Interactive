@@ -1,16 +1,171 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII Art example</title>
-    <style> body {padding: 0; margin: 0} </style>
-    <script src="asciiart/p5/p5.min.js"></script>
-    <!---<script src="../p5/p5.sound.min.js"></script>-->
-    <script src="asciiart/p5/p5.dom.min.js"></script>
-    <script src="asciiart/asciiart/p5.asciiart.min.js"></script>
-    <script src="asciiart/examples/asciiart_camera_example.js"></script>
-  </head>
-  <body>
-  </body>
-</html>
+<html lang="en">
+    <head>
+        <title>Eric Joo Design</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://img.icons8.com/ios-glyphs/30/000000/happy--v1.png">
+        <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.min.js"></script>
+    </head>
+
+
+    <body>
+        <main>
+
+            <div class="cardcontainer">
+
+                <div class="backgroundimg">
+                    <img src="img/bg_image_03.jpg">
+                </div>
+
+                <div class="logo">
+                    <img src="img/OHTLOGO_hr_white.png" id="rotate3D">
+                </div>
+
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_01.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_02.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_03.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_04.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_05.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_06.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_07.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_08.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_09.jpg">  
+                </div>
+                <div class="card">
+                    <img id="cardimage" src="img/bl/bl_10.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_11.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_12.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_13.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_14.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_15.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_16.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_17.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_18.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_19.jpg">  
+                </div>
+                <div class="card" id="extra">
+                    <img id="cardimage" src="img/bl/bl_20.jpg">  
+                </div>
+
+            </div>
+
+            <div class="blank-slate" style="width:100vw;height:200vh;background-color:rgb(255, 242, 244)">
+
+            </div>
+
+        </main>
+
+        <!-- tilt.js -->
+        <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+        <script type="text/javascript">
+
+            // CHANGES
+            var card = document.querySelectorAll(".card")
+            for (var i = 0; i < card.length; i++) {
+                card[i].setAttribute("data-tilt", "");
+                card[i].setAttribute("data-tilt-reset", "false");
+            }
+
+            VanillaTilt.init(card, {
+                reverse: true,
+                max: 90,
+                startX: 0,
+                startY: 0,
+                speed: 10000,
+                perspective: 1000,
+                scale: 1.00,
+                easing: "cubic-bezier(0,3,1,1)",
+                transition: true,
+                axis: "x",
+                glare: false,
+                "max-glare": 0.25,
+                gyroscope: true,
+                gyroscopeMaxAngleX: 80,
+                gyroscopeMinAngleX: -80
+            });
+
+            
+
+        </script>
+
+        <script>
+            
+
+            // Reset VanillaTilt
+
+            timeOut = 3000; // delay in milliseconds
+
+            $(".card").mouseleave(function () {
+                setTimeout(function() {
+                    var card = document.querySelectorAll(".card")
+                    for (var i = 0; i < card.length; i++) {
+                        card[i].vanillaTilt.destroy();
+                    }
+                    VanillaTilt.init(card, {
+                        reverse: true,
+                        max: 90,
+                        startX: 0,
+                        startY: 0,
+                        speed: 10000,
+                        perspective: 1000,
+                        scale: 1.00,
+                        easing: "cubic-bezier(0,3,1,1)",
+                        transition: true,
+                        axis: "x",
+                        glare: false,
+                        "max-glare": 0.25,
+                        gyroscope: true,
+                        gyroscopeMaxAngleX: 80,
+                        gyroscopeMinAngleX: -80
+                    });
+                }, timeOut);
+            })
+            
+        </script>
+        
+    </body>
+
